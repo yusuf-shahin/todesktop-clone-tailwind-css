@@ -1,4 +1,4 @@
-# Clone toDesktop Webside Using tailwind css
+# Clone toDesktop Webside Using Tailwind Css
 
 - [**Want to see the real webside ?**](https://www.todesktop.com/)
 

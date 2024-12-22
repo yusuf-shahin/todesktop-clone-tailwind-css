@@ -4,12 +4,107 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>toDesktop - web app to desktop</title>
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
     <!-- tailwind link -->
-    <link href="./output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./output.css" />
   </head>
   <body>
-    <h1 class="text-3xl font-bold underline font-random text-shahin">
-      Hello world!
-    </h1>
+    <!--* Navbar -->
+    <nav class="p-3 bg-white flex justify-between items-center">
+      <a href="#" class="flex items-center gap-2">
+        <img
+          class="object-cover max-h-12 max-w-12"
+          src="../assets/asset 0.png"
+          alt=""
+        />
+        <span class="text-lg font-medium font-display">toDesktop</span>
+      </a>
+
+      <!--* nav menu  -->
+      <div class="hidden lg:flex gap-12">
+        <a href="#" class="hover:text-primary">Pricing</a>
+        <a href="#" class="hover:text-primary">Docs</a>
+        <a href="#" class="hover:text-primary">Changelog</a>
+        <a href="#" class="hover:text-primary">Blog</a>
+        <a href="#" class="hover:text-primary">Login</a>
+      </div>
+
+      <!--# Electron button (large display) -->
+      <button
+        class="hidden lg:flex items-center gap-2 border border-gray-400 rounded-lg px-6 py-2 hover:border-gray-700"
+      >
+        <img src="../assets/asset 1.svg" alt="#" />
+        <span class="capitalize">electron developer</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+
+      <!--! menu button ( moble display ) -->
+      <!-- solid icon -->
+      <button class="p-2 lg:hidden" id="nav-button-solid">
+        <i class="fa-solid fa-bars text-gray-600"></i>
+      </button>
+
+      <!--! Mobile navbar -->
+      <div id="nav-cover" class="hidden fixed z-10 lg:hidden bg-white inset-0">
+        <div class="p-3 flex justify-between items-center">
+          <a href="#" class="flex items-center gap-2">
+            <img
+              class="object-cover max-h-12 max-w-12"
+              src="../assets/asset 0.png"
+              alt=""
+            />
+            <span class="text-lg font-medium font-display">toDesktop</span>
+          </a>
+          <!--cross icon button -->
+          <button class="p-2 lg:hidden" id="nav-button-cross">
+            <i class="fa-solid fa-xmark text-gray-600"></i>
+          </button>
+        </div>
+
+        <!-- item -->
+        <ul class="mt-6">
+          <a
+            href="#"
+            class="p-3 m-3 font-medium hover:bg-gray-50 rounded-lg block"
+            >Pricing</a
+          >
+          <a
+            href="#"
+            class="p-3 m-3 font-medium hover:bg-gray-50 rounded-lg block"
+            >Docs</a
+          >
+          <a
+            href="#"
+            class="p-3 m-3 font-medium hover:bg-gray-50 rounded-lg block"
+            >Changelog</a
+          >
+          <a
+            href="#"
+            class="p-3 m-3 font-medium hover:bg-gray-50 rounded-lg block"
+            >Blog</a
+          >
+          <a
+            href="#"
+            class="p-3 m-3 font-medium hover:bg-gray-50 rounded-lg block"
+            >Login</a
+          >
+        </ul>
+        <!-- border -->
+        <div class="h-[1px] mt-6 bg-gray-100"></div>
+        <!-- electron button -->
+        <button
+          class="w-full mt-4 ml-2 flex items-center gap-2 rounded-lg px-4 py-2 hover:bg-slate-50"
+        >
+          <img src="../assets/asset 1.svg" alt="#" />
+          <span class="capitalize">electron developer</span>
+        </button>
+      </div>
+    </nav>
+
+    <script src="app.js"></script>
   </body>
 </html>
