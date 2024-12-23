@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>toDesktop - web app to desktop</title>
+    <title>ToDesktop - web app to desktop</title>
     <!-- font awesome -->
     <link
       rel="stylesheet"
@@ -15,7 +15,7 @@
   <body>
     <!--* Navbar -->
     <nav class="p-3 bg-white flex justify-between items-center">
-      <a href="#" class="flex items-center gap-2">
+      <a href="#" class="flex items-center gap-2 flex-1">
         <img
           class="object-cover max-h-12 max-w-12"
           src="../assets/asset 0.png"
@@ -25,7 +25,7 @@
       </a>
 
       <!--* nav menu  -->
-      <div class="hidden lg:flex gap-12">
+      <div class="hidden lg:flex gap-12 lg:font-bold text-lg">
         <a href="#" class="hover:text-primary">Pricing</a>
         <a href="#" class="hover:text-primary">Docs</a>
         <a href="#" class="hover:text-primary">Changelog</a>
@@ -34,13 +34,15 @@
       </div>
 
       <!--# Electron button (large display) -->
-      <button
-        class="hidden lg:flex items-center gap-2 border border-gray-400 rounded-lg px-6 py-2 hover:border-gray-700"
-      >
-        <img src="../assets/asset 1.svg" alt="#" />
-        <span class="capitalize">electron developer</span>
-        <i class="fa-solid fa-arrow-right"></i>
-      </button>
+      <div class="hidden lg:flex justify-end flex-1">
+        <button
+          class="flex items-center gap-2 border border-gray-400 rounded-lg px-6 py-2 hover:border-gray-700"
+        >
+          <img src="../assets/asset 1.svg" alt="#" />
+          <span class="capitalize">electron developer</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
 
       <!--! menu button ( moble display ) -->
       <!-- solid icon -->
@@ -104,6 +106,58 @@
         </button>
       </div>
     </nav>
+
+    <!--* Main -->
+    <main>
+      <!--* Hero section  -->
+      <div
+        class="min-h-screen bg-gradient-to-br from-purple-50 via-orange-50 to-transparent"
+      >
+        <!--# hero container -->
+        <div
+          class="max-w-4xl mx-auto px-6 sm:px-8 pb-32 flex flex-col sm:items-center sm:text-center"
+        >
+          <!--# verson text -->
+          <div
+            class="flex items-center my-8 gap-3 border border-yellow-400 bg-yellow-100 rounded-lg px-3 py-1 w-fit shadow-md hover:shadow-lg hover:-translate-y-1 cursor-pointer transition duration-500 group lg:mt-14"
+          >
+            <div
+              class="h-2 w-2 bg-yellow-400 rounded-full border border-yellow-600"
+            ></div>
+            <p class="font-medium text-yellow-500">v0.25.0:</p>
+            <i
+              class="fa-solid fa-arrow-right text-yellow-600 group-hover:translate-x-1 transition duration-300 group-hover:text-yellow-800"
+            ></i>
+          </div>
+
+          <!--# heading , paragraph and button  -->
+          <h1
+            class="sm:mb-6 text-5xl text-gray-800 sm:text-7xl font-semibold leading-snug mt-4"
+          >
+            Web app to desktop app in minutes
+          </h1>
+          <p class="text-xl text-gray-800 sm:text-2xl mt-4">
+            Take your web app codebase and transform it into a cross platform
+            desktop app with native functionality.
+          </p>
+          <!--* button  -->
+          <div
+            class="mt-12 flex flex-col gap-4 sm:flex-row sm:justify-center sm:items-center sm:text-center"
+          >
+            <button
+              class="px-8 py-3 font-semibold rounded-lg text-white bg-primary shadow-sm hover:bg-opacity-90"
+            >
+              Download now
+            </button>
+            <button
+              class="px-8 py-3 font-semibold rounded-lg bg-white border border-gray-300 hover:border-gray-400 hover:shadow-sm"
+            >
+              Read Docs
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <script src="app.js"></script>
   </body>
